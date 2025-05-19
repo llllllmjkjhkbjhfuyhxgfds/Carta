@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Carta para Voc�</title>
+  <title>Carta para Você</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     * {
@@ -19,11 +19,12 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      overflow: hidden;
     }
     .carta {
       width: 90vw;
-      max-width: 400px;
-      height: 300px;
+      max-width: 420px;
+      height: 320px;
       background: #fff;
       border: 3px solid #ff69b4;
       border-radius: 20px;
@@ -86,7 +87,7 @@
 <body>
 
 <div class="carta" onclick="abrirCarta()">
-  <span style="font-size: 40px; color: #ff69b4;"></span>
+  <img src="carta.gif" alt="ícone carta" style="width: 120px;">
   <div class="papel" id="papel">
     <p>Bom dia, princesa!</p>
     <img src="ursinho.gif" alt="ursinho fofo">
@@ -95,10 +96,13 @@
 
 <div class="mensagem" id="mensagem">Toque para abrir a carta</div>
 
+<audio id="audio" src="https://assets.mixkit.co/sfx/preview/mixkit-small-group-cheer-and-applause-518.mp3"></audio>
+
 <script>
   function abrirCarta() {
     document.getElementById("papel").style.top = "0";
     document.getElementById("mensagem").style.display = "none";
+    document.getElementById("audio").play();
   }
 </script>
 
